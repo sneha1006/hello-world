@@ -1,19 +1,29 @@
 variable "region" {
-  default = "ap-south-1"
-}
-
-variable "app_name" {
-  default = "hello-world"
+  description = "The AWS region to deploy into"
+  default     = "ap-south-1"
 }
 
 variable "ecs_cluster_name" {
-  default = "hello-world-cluster"
+  description = "The name of the ECS cluster"
+  default     = "hello-world-cluster"
 }
 
-variable "desired_count" {
-  default = 1
+variable "app_name" {
+  description = "The name of the application"
+  default     = "hello-world-app"
+}
+
+variable "docker_username" {
+  description = "Your Docker Hub username"
+  type        = string
 }
 
 variable "container_port" {
-  default = 3000
+  description = "Port that the container listens on"
+  default     = 3000
+}
+
+variable "desired_count" {
+  description = "Number of desired instances for ECS service"
+  default     = 1
 }
