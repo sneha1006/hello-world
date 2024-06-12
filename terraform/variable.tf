@@ -1,20 +1,21 @@
+# terraform/variables.tf
 variable "region" {
-  description = "The AWS region to deploy into"
+  description = "AWS region to deploy into"
   default     = "ap-south-1"
 }
 
 variable "ecs_cluster_name" {
-  description = "The name of the ECS cluster"
+  description = "Name of the ECS cluster"
   default     = "hello-world-cluster"
 }
 
 variable "app_name" {
-  description = "The name of the application"
+  description = "Name of the application"
   default     = "hello-world-app"
 }
 
 variable "docker_username" {
-  description = "Your Docker Hub username"
+  description = "Docker Hub username"
   type        = string
 }
 
